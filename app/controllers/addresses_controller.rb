@@ -9,6 +9,10 @@ class AddressesController < ApplicationController
     addr = params.dig(:address, :addr)
     # STEP_1 check verification code
     @address = Address.new(address_params)
+    unless verify_rucaptcha?
+      flash.now[:captcha] = "captcha is wrong"
+      return render :new
+    end
 
     # STEP_2 check address info
     unless TransactionInterface.is_address(addr)
