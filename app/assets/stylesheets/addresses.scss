@@ -1,0 +1,44 @@
+// Place all the styles related to the addresses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//.new-address {
+//  margin-left: auto;
+//  margin-right: auto;
+//}
+
+.simple_captcha_refresh_button {
+  display: none;
+}
+
+.address-label {
+  width: fit-content;
+}
+
+div {
+  //width: fit-content;
+  margin: 0;
+  width: 500px;
+}
+
+.address-form {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.captcha {
+  display: flex;
+  justify-content: space-between;
+}
+
+#captcha {
+  display: flex;
+  justify-content: space-between;
+  img {
+    padding: 0;
+  }
+}
+
