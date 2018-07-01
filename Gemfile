@@ -42,6 +42,11 @@ gem 'sha3-pure-ruby', '~> 0.1.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 
+# Deployment
+gem 'mina', require: false
+gem 'mina-puma', require: false
+gem 'mina-multistage', require: false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
