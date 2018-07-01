@@ -1,0 +1,5 @@
+{
+  "name": "testnet-faucet-mri",
+  "private": true,
+  "dependencies": {}
+}
