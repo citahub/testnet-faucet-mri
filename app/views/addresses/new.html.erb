@@ -1,0 +1,32 @@
+<%= form_with model: @address, scope: :address, local: true, class: "container mx-auto address-form", style: "width: 500px;" do |form| %>
+
+  <div class="form-group">
+    <%= form.label :addr, "Enter your address" %>
+    <%= form.text_field :addr, class: "form-control" %>
+    <% if flash[:addr] %>
+      <small class="form-text text-danger">
+        <%= flash[:addr] %>
+      </small>
+    <% end %>
+  </div>
+
+  <div id="captcha" class="form-group row">
+    <%= rucaptcha_image_tag(alt: 'Captcha', class: "col-6") %>
+    <%= rucaptcha_input_tag(class: 'form-control col-6') %>
+    <% if flash[:captcha] %>
+      <small class="form-text text-danger">
+        <%= flash[:captcha] %>
+      </small>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary col-sm-12">Get NOS</button>
+    <% if flash[:success] %>
+      <small class="form-text text-success">
+        <%= flash[:success] %>
+      </small>
+    <% end %>
+  </div>
+
+<% end %>

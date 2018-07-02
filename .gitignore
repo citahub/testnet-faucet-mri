@@ -28,3 +28,6 @@
 /config/puma.rb
 
 .ruby-gemset
+
+.env.local
+.env.*.local
