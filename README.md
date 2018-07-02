@@ -1,24 +1,24 @@
-# README
+# Testnet Faucet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## dependencies
 
-Things you may want to cover:
+  - postgresql
+  - redis
+  - imagemagic
+  - ghostscript
+  - [cita-cli](https://github.com/driftluo/cita-cli)
+    
+## init project
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - rails db:setup
+  - build cita-cli binary and move to system bin path, such as /usr/local/bin, for global access.
+  
+## config project
+  - touch .env.local (config for private key, url and so on...)
+  - cp config/database.yml.sample config/database.yml (for database config)
+  - touch config/master.key (optional for development and test)
+  - cp config/puma.rb.sample config/puma.rb (optional for development and test)
+  
+## run project
+  - rails s
+  
