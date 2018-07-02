@@ -43,6 +43,11 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 gem 'rucaptcha'
 
+# pry and ap
+gem 'pry'
+gem 'pry-rails'
+gem 'awesome_print', '~> 1.8'
+
 # Deployment
 gem 'mina', require: false
 gem 'mina-puma', require: false
